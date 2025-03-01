@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>MAS®MUSIC Admin System</title>
+</head>
+<body>
+    <h3>MAS® MUSIC Admin System</h3>
+    <p>Installation time:2024-6-30</p>
+    <p>Language:English</p>
+    <p>UserID:00002</p>
+    <p>Country:Hong Kong,China</p>
+    <p>Web Space:5GB</p>
+    <hr>
+    <h2>MUSIC</h2>
+    <p>Online:YES</p>
+    <p>Error:NO</p>
+    <p>2024-6-30~Now</p>
+    <hr>
+    <h4>TIME</h4>
+    <script>
+                Date.prototype.format = function (fmt) {
+                    var o = {
+                        "y+": this.getFullYear, //年
+                        "M+": this.getMonth() + 1, //月份
+                        "d+": this.getDate(), //日
+                        "h+": this.getHours(), //小时
+                        "m+": this.getMinutes(), //分
+                        "s+": this.getSeconds() //秒
+                    };
+                    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+                    for (var k in o)
+                        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+                    return fmt;
+                }
+                setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+            </script><div id="dateTime">MUSIC TIME SYSTEM ERROR</div>
+    <hr>
+    <h3>HELP</h3>
+    <p><a href="https://www.showdoc.com.cn/NiceMCWord">NiceMC Technical documentation</a>PassWord:123456</p>
+    <hr>
+    <pre>Copyright © 2024 NiceMCMUSIC.All Rights Reserved.</pre>
+    <pre>Only use this.</pre>
+</body>
+<div style="text-align:right;position:fixed;bottom:3px;right:3px;width:100%;z-index:999999;cursor:pointer;line-height:0;display:block;"><a target="_blank" href="/" title="NiceMCMUSIC"><img alt="NiceMCMUSIC" src="/img/music.png" style="border-width: 0px;width: 180px; height: 45px; float: right;"></a></div>
+
+</html>
